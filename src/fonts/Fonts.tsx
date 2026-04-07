@@ -1,5 +1,6 @@
 import {
   Bitcount_Grid_Single,
+  DM_Sans,
   Gravitas_One,
   Lobster_Two,
   Open_Sans,
@@ -33,19 +34,25 @@ export const lobster = Lobster_Two({
 });
 
 export const gravitas = Gravitas_One({
-	subsets: ["latin"],
-	weight: ["400"],
-	variable: "--font-gravitas"
-})
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-gravitas",
+});
 
 export const rowdies = Rowdies({
-	subsets: ["latin"],
-	weight: ["400", "700"],
-	variable: "--font-rowdies"
-})
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-rowdies",
+});
 
 export const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-roboto",
+});
+
+export const dm_sans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-dm-sans",
 });

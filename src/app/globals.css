@@ -50,6 +50,7 @@
   --font-bitcount: var(--font-bitcount);
   --font-gravitas: var(--font-gravitas);
   --font-rowdies: var(--font-rowdies);
+  --font-dm-sans : var(--font-dm-sans);
 }
 
 :root {
@@ -127,5 +128,264 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.hero-shell {
+  width: 100%;
+  height: 700px;
+  border: 1px solid #ececec;
+  background: #ffffff;
+}
+
+.hero-stage {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image:
+    linear-gradient(to bottom, rgba(255, 231, 238, 0.45), rgba(255, 255, 255, 0) 120px),
+    linear-gradient(to right, rgba(226, 232, 240, 0.9) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.9) 1px, transparent 1px);
+  background-size: 100% 100%, 70px 70px, 70px 70px;
+}
+
+.hero-dot {
+  position: absolute;
+  z-index: 1;
+  border-radius: 9999px;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.35);
+}
+
+.hero-brand-tile {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.hero-dot-blue {
+  left: 86px;
+  top: 113px;
+  width: 12px;
+  height: 12px;
+  background: #5b5be7;
+}
+
+.hero-dot-red {
+  left: 195px;
+  top: 298px;
+  width: 14px;
+  height: 14px;
+  background: #ff6270;
+}
+
+.hero-dot-gold-small {
+  left: 102px;
+  bottom: 28px;
+  width: 10px;
+  height: 10px;
+  background: #f3cf52;
+}
+
+.hero-dot-green-top {
+  left: 50%;
+  top: 84px;
+  width: 14px;
+  height: 14px;
+  background: #19d39b;
+  transform: translateX(-50%);
+}
+
+.hero-dot-cyan-bottom {
+  left: 50%;
+  bottom: 25px;
+  width: 14px;
+  height: 14px;
+  background: #32d4e0;
+  transform: translateX(-50%);
+}
+
+.hero-dot-gold-right {
+  right: 102px;
+  top: 182px;
+  width: 14px;
+  height: 14px;
+  background: #ead36f;
+}
+
+.hero-dot-navy-right {
+  right: 90px;
+  bottom: 93px;
+  width: 10px;
+  height: 10px;
+  background: #133b74;
+}
+
+.hero-airbnb-tile {
+  left: 256px;
+  top: 74px;
+  width: 72px;
+  height: 72px;
+  background: #ff5a62;
+  transform: rotate(-30deg);
+}
+
+.hero-booking-tile {
+  right: 241px;
+  top: 66px;
+  width: 66px;
+  height: 66px;
+  background: #0d4f91;
+  border-color: #ff624e;
+  transform: rotate(28deg);
+}
+
+.hero-booking-dot {
+  position: absolute;
+  right: 17px;
+  bottom: 11px;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #38d4f0;
+}
+
+.hero-abstract-tile {
+  left: 260px;
+  bottom: 76px;
+  width: 58px;
+  height: 58px;
+  background: #081e49;
+  transform: rotate(-24deg);
+}
+
+.hero-abstract-stripe {
+  position: absolute;
+  top: 12px;
+  width: 5px;
+  border-radius: 9999px;
+}
+
+.hero-abstract-stripe-one {
+  left: 15px;
+  top: 12px;
+  bottom: 12px;
+  background: linear-gradient(to bottom, #f0f2ff, #21d7ff 55%, #ff4e6d);
+}
+
+.hero-abstract-stripe-two {
+  left: 23px;
+  top: 15px;
+  bottom: 15px;
+  background: linear-gradient(to bottom, #ffd86e, #7de5ff 55%, #0f7cff);
+}
+
+.hero-abstract-stripe-three {
+  left: 31px;
+  top: 18px;
+  bottom: 18px;
+  background: linear-gradient(to bottom, #ff7a8a, #8fe8f2 55%, #1a58ff);
+}
+
+.hero-tripadvisor-tile {
+  right: 234px;
+  bottom: 58px;
+  width: 68px;
+  height: 68px;
+  background: #1bd7a7;
+  transform: rotate(35deg);
+}
+
+.hero-content-shell {
+  max-width: 820px;
+}
+
+.hero-title {
+  margin: 0;
+  color: #000000;
+  font-family: var(--font-open-sans), sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.hero-subtitle {
+  margin: 4px 0 0;
+  color: #000000;
+  font-family: var(--font-open-sans), sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hero-description {
+  max-width: 690px;
+  margin-top: 24px;
+  color: #222222;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.hero-primary-button {
+  height: 42px;
+  border-radius: 6px;
+  background: #ff3f7d;
+  padding: 0 24px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 14px 28px rgba(255, 63, 125, 0.28);
+}
+
+.hero-primary-button:hover {
+  background: #ff2f72;
+}
+
+.hero-airbnb-label {
+  margin-top: -2px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.hero-booking-letter {
+  font-size: 33px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 46px;
+  }
+
+  .hero-subtitle {
+    font-size: 34px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 53px;
+  }
+
+  .hero-subtitle {
+    font-size: 37px;
+  }
+
+  .hero-description {
+    font-size: 16px;
   }
 }

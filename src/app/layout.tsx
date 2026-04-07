@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import ReduxProvider from "@/redux/Provider";
 import Loading from "@/components/Others/Loader/Loading";
 import {
-  bitcount,
+  dm_sans,
   gravitas,
   lobster,
   openSans,
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.variable} ${playfair.variable} ${bitcount.variable} ${lobster.variable} ${roboto.variable} ${gravitas.variable} ${rowdies.variable} antialiased`}
+        className={`${openSans.variable} ${playfair.variable} ${dm_sans.variable} ${lobster.variable} ${roboto.variable} ${gravitas.variable} ${rowdies.variable} antialiased`}
       >
         <Suspense fallback={<Loading />}>
           <ReduxProvider>

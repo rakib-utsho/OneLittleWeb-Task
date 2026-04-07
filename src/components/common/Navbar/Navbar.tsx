@@ -1,27 +1,35 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { HomeIcon, InfoIcon, Mail, Menu, Settings } from "lucide-react";
+import { ArrowRight, Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const navigationLinks = [
-  { name: "Home", href: "/", icon: HomeIcon },
-  { name: "About", href: "/about", icon: InfoIcon },
-  { name: "Services", href: "/services", icon: Settings },
-  { name: "Contact", href: "/contact", icon: Mail },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Blog", href: "/blog" },
+  { name: "Resources", href: "/resources" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActiveLink = (href: string) => pathname === href;
+
   return (
     //main header
     <header className="sticky top-0 z-50 w-full mx-auto border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       {/*container for navbar content */}
-      <div className="w-full max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div className="w-full container mx-auto flex items-center justify-between p-4">
         {/*logo section*/}
         <Link href="/" className="text-2xl font-bold">
-          <span className="text-2xl font-bold">Logo</span>
+          <Image src={"/images/logo.png"} alt="Logo" width={120} height={60} />
         </Link>
 
         {/*navigation links*/}
@@ -30,7 +38,11 @@ export const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="flex items-center justify-center text-sm font-medium transition-colors hover:text-primary gap-2"
+              className={`flex items-center justify-center gap-2 text-md transition-colors hover:text-[#ED3C6A] ${
+                isActiveLink(link.href)
+                  ? "font-bold text-[#ED3C6A] underline underline-offset-4"
+                  : "font-medium"
+              }`}
             >
               {link.icon && <link.icon className="w-5 h-5" />}
               {link.name}
@@ -39,8 +51,14 @@ export const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button className="hidden md:inline-flex cursor-pointer" size="sm">
-            Get Started
+          <Button
+            asChild
+            className="hero-primary-button hidden md:inline-flex cursor-pointer"
+          >
+            <Link href="#meeting">
+              Schedule A Meeting
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </Button>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -49,19 +67,28 @@ export const Navbar = () => {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-75 sm:w-100">
               <nav className="border-t flex flex-col gap-6 mt-10 px-4 pt-6">
                 {navigationLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="flex items-start justify-baseline font-medium transition-colors hover:text-primary gap-4"
+                    className={`flex items-start justify-baseline gap-4 transition-colors hover:text-[#ED3C6A] ${
+                      isActiveLink(link.href)
+                        ? "font-bold text-[#ED3C6A] underline underline-offset-4"
+                        : "font-medium"
+                    }`}
                   >
                     {link.icon && <link.icon className="w-6 h-6" />}
                     {link.name}
                   </Link>
                 ))}
-                <Button className="mt-4 w-full">Get Started</Button>
+                <Button asChild className="hero-primary-button">
+                  <Link href="#meeting">
+                    Schedule A Meeting
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
