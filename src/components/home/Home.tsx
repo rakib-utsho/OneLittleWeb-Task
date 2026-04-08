@@ -1,7 +1,9 @@
+import CTCSection from "./CTCSection";
 import GetStartedSection from "./GetStartedSection";
 import HeroSection from "./HeroSection";
 import PriceSection from "./PriceSection";
 import ServiceSection from "./ServiceSection";
+import TestimonialSection from "./TestimonialSection";
 import ToolsSection from "./ToolsSection";
 import TrustedBrandsSection from "./TrustedBrandsSection";
 
@@ -14,6 +16,8 @@ function Home() {
       <PriceSection />
       <ToolsSection />
       <GetStartedSection />
+      <CTCSection />
+      <TestimonialSection />
     </>
   );
 }

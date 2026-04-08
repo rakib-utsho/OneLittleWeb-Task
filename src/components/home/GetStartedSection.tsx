@@ -20,7 +20,7 @@ const steps = [
 
 function GetStartedSection() {
   return (
-    <section className="bg-[#f6f6f6] px-4 py-16 md:py-20">
+    <section className="px-4 py-5 md:py-5">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-center text-4xl font-extrabold tracking-[-0.03em] text-[#171717] md:text-5xl">
           Getting Started is <span className="text-[#ED3C6A]">Easy</span>
@@ -39,11 +39,11 @@ function GetStartedSection() {
 
             return (
               <article key={step.id} className="relative">
-                <span className="absolute -left-3 -top-3 z-10 flex h-12 w-12 items-center justify-center rounded-full border-4 border-[#ED3C6A] bg-[#f6f6f6] text-2xl font-medium leading-none text-[#171717]">
+                <span className="absolute -left-3 -top-3 z-10 flex h-12 w-12 items-center justify-center rounded-full border-4 border-[#ED3C6A] bg-[#f6f6f6] text-2xl font-medium leading-none text-[#171717] p-4">
                   {step.id}
                 </span>
 
-                <div className="flex h-[132px] items-center justify-center rounded-md border border-[#ecdce2] bg-[#f6f6f6]">
+                <div className="flex h-45 items-center justify-center rounded-md border-2 border-[#FDEBF0] gap-5">
                   <div className="relative">
                     <Image
                       src={step.icon}
@@ -54,7 +54,7 @@ function GetStartedSection() {
                   </div>
                 </div>
 
-                <p className="mx-auto mt-5 max-w-[220px] text-center text-[28px] leading-[1.15] font-semibold tracking-[-0.01em] text-[#171717]">
+                <p className="mx-auto mt-5 max-w-[230px] text-center text-[20px] leading-[1.15] font-semibold tracking-[-0.01em] text-[#171717]">
                   {step.title}
                 </p>
               </article>

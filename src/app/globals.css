@@ -265,6 +265,32 @@
   transform: rotate(-24deg);
 }
 
+/* Testimonial carousel behavior */
+.testimonial-swiper {
+  padding: 0 14px 6px;
+}
+
+@media (min-width: 1024px) {
+  .testimonial-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .testimonial-swiper .swiper-slide {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.88;
+  }
+
+  .testimonial-swiper .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .testimonial-swiper .swiper-slide-active article {
+    background: #ffffff;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+    border-color: #f1d6de;
+  }
+}
+
 .hero-abstract-stripe {
   position: absolute;
   top: 12px;
