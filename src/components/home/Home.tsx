@@ -1,3 +1,4 @@
+import GetStartedSection from "./GetStartedSection";
 import HeroSection from "./HeroSection";
 import PriceSection from "./PriceSection";
 import ServiceSection from "./ServiceSection";
@@ -12,6 +13,7 @@ function Home() {
       <ServiceSection />
       <PriceSection />
       <ToolsSection />
+      <GetStartedSection />
     </>
   );
 }
