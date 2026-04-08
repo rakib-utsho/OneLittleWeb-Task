@@ -75,7 +75,7 @@ export default function FAQSection() {
                 <button
                   type="button"
                   onClick={() => setOpenId(isOpen ? 0 : item.id)}
-                  className="flex w-full items-start justify-between gap-4 text-left"
+                  className="flex w-full cursor-pointer items-start justify-between gap-4 text-left"
                   aria-expanded={isOpen}
                 >
                   <span className="text-[16px] leading-[1.2] font-extrabold text-[#111827] md:text-[20px]">
@@ -105,13 +105,28 @@ export default function FAQSection() {
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <div className="relative h-11 w-23">
             <span className="absolute left-0 top-1 z-10 flex h-10 w-10 items-center justify-center rounded-full text-[11px] font-bold text-[#1f2937]">
-              <Image src="/images/tt3.png" alt="User 1" width={40} height={40} />
+              <Image
+                src="/images/tt3.png"
+                alt="User 1"
+                width={40}
+                height={40}
+              />
             </span>
             <span className="absolute left-1/2 top-0 z-20 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full text-[11px] font-bold text-white">
-              <Image src="/images/tt1.png" alt="User 2" width={40} height={40} />
+              <Image
+                src="/images/tt1.png"
+                alt="User 2"
+                width={40}
+                height={40}
+              />
             </span>
             <span className="absolute right-0 top-1 z-10 flex h-10 w-10 items-center justify-center rounded-full text-[11px] font-bold text-[#1f2937]">
-              <Image src="/images/tt2.png" alt="User 3" width={40} height={40} />
+              <Image
+                src="/images/tt2.png"
+                alt="User 3"
+                width={40}
+                height={40}
+              />
             </span>
           </div>
 

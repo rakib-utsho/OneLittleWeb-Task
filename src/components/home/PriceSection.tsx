@@ -116,7 +116,7 @@ function PriceSection() {
             aria-label="Toggle yearly billing"
             aria-checked={isYearly}
             onClick={() => setBillingCycle(isYearly ? "monthly" : "yearly")}
-            className={`relative inline-flex h-7 w-12 shrink-0 items-center rounded-full border transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed3c6a]/40 ${
+            className={`relative inline-flex h-7 w-12 shrink-0 items-center rounded-full border transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed3c6a]/40 cursor-pointer ${
               isYearly
                 ? "border-[#ed3c6a] bg-[#ed3c6a]"
                 : "border-[#b8bcc6] bg-[#c7cbd3]"
