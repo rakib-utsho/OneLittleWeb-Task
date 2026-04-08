@@ -44,7 +44,6 @@ export const Navbar = () => {
                   : "font-medium"
               }`}
             >
-              {link.icon && <link.icon className="w-5 h-5" />}
               {link.name}
             </Link>
           ))}
@@ -79,7 +78,6 @@ export const Navbar = () => {
                         : "font-medium"
                     }`}
                   >
-                    {link.icon && <link.icon className="w-6 h-6" />}
                     {link.name}
                   </Link>
                 ))}

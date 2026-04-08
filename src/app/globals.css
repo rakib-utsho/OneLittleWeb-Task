@@ -362,6 +362,188 @@
   line-height: 1;
 }
 
+.trusted-shell {
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  background: #f6f6f6;
+}
+
+.trusted-heading-wrap {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ececec;
+  padding: 22px 16px;
+  background: #f6f6f6;
+}
+
+.trusted-heading {
+  margin: 0;
+  color: #171717;
+  font-family: var(--font-open-sans), sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.trusted-logos-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  background: #ffffff;
+}
+
+.trusted-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 66px;
+  border-bottom: 1px solid #ececec;
+  color: #232323;
+  font-family: var(--font-open-sans), sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.trusted-logo:nth-child(2n + 1) {
+  border-right: 1px solid #ececec;
+}
+
+.trusted-logo-icon {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.trusted-logo-airbnb {
+  color: #ff5a5f;
+}
+
+.trusted-logo-booking {
+  color: #1c4db3;
+}
+
+.trusted-logo-vrbo {
+  color: #2f315c;
+  font-family: var(--font-gravitas), serif;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.trusted-logo-tripadvisor {
+  color: #171717;
+}
+
+.trusted-logo-tripadvisor .trusted-logo-icon {
+  color: #1cc98b;
+}
+
+.trusted-logo-agoda {
+  position: relative;
+  color: #777777;
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.trusted-agoda-dots {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  display: inline-flex;
+  gap: 4px;
+  transform: translateX(-50%);
+}
+
+.trusted-agoda-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+}
+
+.trusted-agoda-dot-red {
+  background: #fd4e5f;
+}
+
+.trusted-agoda-dot-yellow {
+  background: #f0ba2e;
+}
+
+.trusted-agoda-dot-green {
+  background: #7ccb48;
+}
+
+.trusted-agoda-dot-cyan {
+  background: #32bfcb;
+}
+
+.trusted-agoda-dot-purple {
+  background: #8367d8;
+}
+
+.trusted-logo-expedia {
+  color: #1b2049;
+}
+
+.trusted-logo-expedia .trusted-logo-icon {
+  color: #f6bf00;
+}
+
+.trusted-logo-hometogo {
+  color: #171717;
+  font-size: 20px;
+  text-transform: lowercase;
+}
+
+.trusted-logo-hometogo span {
+  max-width: 82px;
+  line-height: 1.02;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .trusted-heading {
+    font-size: 31px;
+  }
+
+  .trusted-logos-row {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .trusted-logo {
+    border-right: 1px solid #ececec;
+    border-bottom: 0;
+    min-height: 82px;
+    padding: 0 8px;
+    white-space: nowrap;
+  }
+
+  .trusted-logo:nth-child(2n + 1) {
+    border-right: 1px solid #ececec;
+  }
+
+  .trusted-logo:last-child {
+    border-right: 0;
+  }
+
+  .trusted-logo-hometogo {
+    font-size: 14px;
+  }
+
+  .trusted-logo-hometogo span {
+    max-width: 62px;
+  }
+}
+
+@media (max-width: 767px) {
+  .trusted-logo:last-child,
+  .trusted-logo:nth-last-child(2) {
+    border-bottom: 0;
+  }
+}
+
 @media (min-width: 640px) {
   .hero-title {
     font-size: 46px;
