@@ -1,6 +1,7 @@
 import HeroSection from "./HeroSection";
 import PriceSection from "./PriceSection";
 import ServiceSection from "./ServiceSection";
+import ToolsSection from "./ToolsSection";
 import TrustedBrandsSection from "./TrustedBrandsSection";
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       <TrustedBrandsSection />
       <ServiceSection />
       <PriceSection />
+      <ToolsSection />
     </>
   );
 }

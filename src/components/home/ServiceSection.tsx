@@ -82,8 +82,8 @@ function ServiceCard({ title, description, image }: ServiceCardProps) {
 
 function ServiceSection() {
   return (
-    <section className="bg-[#eeeeee] px-4 py-12 md:py-16">
-      <h2 className="mb-8 text-center text-4xl font-bold">
+    <section className="bg-[#ffff] px-4 py-12 md:py-16">
+      <h2 className="mb-8 text-center text-4xl font-extrabold tracking-[-0.03em] text-[#222] md:text-5xl">
         Our <span className="text-[#ED3C6A]">Services</span>
       </h2>
       <p className="mx-auto max-w-5xl px-4 text-center text-lg text-[#171717] md:px-10">

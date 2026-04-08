@@ -91,7 +91,7 @@ function PriceSection() {
   }, [isYearly]);
 
   return (
-    <section id="pricing" className="bg-[#f3f3f3] px-4 py-16 md:px-6 md:py-20">
+    <section id="pricing" className="bg-[#ffff] px-4 py-16 md:px-6 md:py-20">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-4xl font-extrabold tracking-[-0.03em] text-[#222] md:text-5xl">
           Airbnb Assistant <span className="text-[#ed3c6a]">pricing</span>
@@ -164,7 +164,9 @@ function PriceSection() {
                     : "border-[#f1c5d0] bg-[#f3f3f3] text-[#232323]"
                 }`}
               >
-                <h3 className="text-[42px] leading-none font-semibold tracking-[-0.02em]">{plan.name}</h3>
+                <h3 className="text-[42px] leading-none font-semibold tracking-[-0.02em]">
+                  {plan.name}
+                </h3>
 
                 <p
                   className={`mt-2 text-xs leading-[1.35] ${
@@ -198,7 +200,9 @@ function PriceSection() {
                   Get Started Now
                 </button>
 
-                <ul className={`mt-5 space-y-2.5 border-t pt-5 ${featured ? "border-[#f56b90]" : "border-[#e6e6e6]"}`}>
+                <ul
+                  className={`mt-5 space-y-2.5 border-t pt-5 ${featured ? "border-[#f56b90]" : "border-[#e6e6e6]"}`}
+                >
                   {plan.features.map((feature) => (
                     <li
                       key={feature.label}
