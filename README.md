@@ -1,169 +1,126 @@
-# next-redux-starter — Next.js + TypeScript + Redux + shadcn-style Boilerplate
+# OneLittleWeb Web Developer Hiring Task
 
-This repository is a lightweight Next.js boilerplate that demonstrates a recommended folder structure and wiring for:
+A modern, section-based landing page built with Next.js, TypeScript, Tailwind CSS, and Redux Toolkit.
 
-- Next.js 16 + React 19
-- Redux Toolkit + React-Redux (with `redux-persist`)
-- shadcn-style component organization (component-driven UI under `src/components` / `src/components/ui`)
-- Tailwind CSS and utility-first styling
+This project is designed as a frontend hiring task implementation and includes reusable components, responsive layouts, interactive sections, and clean project structure.
 
-Use this starter when you want a modern Next.js app scaffolded with a predictable folder layout and ready-to-use Redux integration.
+## Live Project Goal
 
-## Quick links
+Build a polished multi-section marketing page with:
 
-- Package manifest: `package.json`
-- Environment: `.env` (dev/prod base URLs)
-- App entry: `src/app/layout.tsx` and the `src/app/(commonLayout)` area
+- Clear visual hierarchy
+- Reusable UI components
+- Mobile-first responsiveness
+- Interactive components (carousel, accordion)
+- Maintainable code structure for future scaling
 
-## What you get
+## Implemented Home Sections
 
-- Next 16 & React 19 stack
-- Redux Toolkit store setup at `src/redux/store.ts`
-- Provider wiring at `src/redux/Provider.tsx`
-- Example auth slice at `src/redux/features/auth/authSlice.ts`
-- Organized UI components under `src/components` and `src/components/ui` (shadcn-inspired)
-- Common components: Navbar, Footer, Loader, PageNotFound
-- Utility helper at `src/lib/utils.ts`
+The home page is composed in this order:
 
-## Contract (small)
+1. Hero section
+2. Trusted brands section
+3. Services section
+4. Pricing section
+5. Tools section
+6. Getting started section
+7. CTA (Call-to-Contact) section
+8. Testimonial carousel section (Swiper.js)
+9. FAQ accordion section
+10. Post-FAQ support CTA card
 
-- Inputs: developer provides environment variables in `.env` and installs node deps.
-- Outputs: a running Next.js dev server (hot reload) and persisted Redux state (via `redux-persist`).
-- Success criteria: `npm run dev` starts without critical runtime errors; Redux store hydrates; UI components render.
+Main composition file:
 
-## Edge cases to watch
+- `src/components/home/Home.tsx`
 
-- Missing `.env` values (app expects NEXT_PUBLIC_DEV_BASE_URL / NEXT_PUBLIC_BASE_URL)
-- Redux-persist storage mismatch or SSR hydration warnings — check `redux-persist` config if you see flashing state.
-- Next.js app dir behavior — pages and app router differences (this project uses the App Router).
-- Large bundles: check dependencies and tree-shake unused libs.
+## Tech Stack
 
-## Folder structure explained
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Redux Toolkit + React Redux + redux-persist
+- Swiper.js (testimonials carousel)
+- Lucide React (icons)
 
-Top-level (relevant files/folders):
+## Key Features
 
-- `package.json` - scripts and dependencies
-- `.env` - public env vars (see below)
-- `src/app/` - Next.js App Router (layout, pages grouped in subfolders)
-  - `layout.tsx` - root layout
-  - `not-found.tsx` - 404 handling
-  - `(commonLayout)/` - example common layout and page
-  - `(authLayout)/` - placeholder for auth-scoped routes
+- Component-driven architecture under `src/components`
+- Reusable UI primitives in `src/components/ui`
+- Interactive testimonial slider with hover effects and responsive breakpoints
+- FAQ accordion with expandable/collapsible items
+- Consistent spacing, alignment, and section-level styling
+- Basic Redux wiring ready for app-level state
 
-- `src/components/` - UI components
-  - `common/` - Navbar, Footer
-  - `home/` - Home page component
-  - `Others/` - Loader, PageNotFound components
-  - `ui/` - primitive UI components (button.tsx, card.tsx, sheet.tsx) — this mirrors the shadcn approach (design-system primitives)
+## Folder Highlights
 
-- `src/lib/` - utilities (`utils.ts`)
-- `src/redux/` - Redux wiring
-  - `Provider.tsx` - React-Redux provider wrapper
-  - `store.ts` - store configuration
-  - `api/` - baseApi and testapi
-  - `features/` - slices (example: `auth/authSlice.ts`)
+- `src/app/` - App Router layout and route groups
+- `src/components/common/` - Shared components (Navbar, Footer, etc.)
+- `src/components/home/` - All home page sections
+- `src/components/ui/` - Reusable UI primitives
+- `src/redux/` - Store, provider, API base setup, slices
+- `public/images/` - Static image assets used in sections
 
-## package.json (high level)
+## Getting Started
 
-Important dependencies from the project (exact versions available in `package.json`):
+### 1. Install dependencies
 
-- `next`: 16.0.0
-- `react`: 19.2.0
-- `@reduxjs/toolkit`, `react-redux`: redux toolkit & bindings
-- `redux-persist`: state persistence
-- `tailwindcss` & `@tailwindcss/postcss` (Tailwind v4 listed)
-- UI helper libs: `lucide-react`, `clsx`, `class-variance-authority`, etc.
+```bash
+npm install
+```
 
-Dev dependencies include TypeScript and ESLint.
+### 2. Run development server
 
-## Environment
+```bash
+npm run dev
+```
 
-Example `.env` values (present in repo):
+### 3. Build for production
 
-```text
+```bash
+npm run build
+```
+
+### 4. Start production server
+
+```bash
+npm run start
+```
+
+### 5. Run lint
+
+```bash
+npm run lint
+```
+
+## Scripts
+
+- `dev`: Run Next.js dev server
+- `build`: Build production bundle
+- `start`: Start production server
+- `lint`: Run ESLint checks
+
+## Environment Variables
+
+Create a `.env` file in the project root (if needed by API integration):
+
+```env
 NEXT_PUBLIC_ENV=development
 NEXT_PUBLIC_PORT=5000
 NEXT_PUBLIC_BASE_URL=https://api.yourproductiondomain.com/api
 NEXT_PUBLIC_DEV_BASE_URL=http://localhost:5000/api
 ```
 
-Make sure to copy or edit `.env` for your local environment.
+## Notes
 
-## Installation (Windows / PowerShell)
-
-Open PowerShell in the project root and run:
-
-```powershell
-# install dependencies
-npm install
-
-# run dev server
-npm run dev
-```
-
-The project exposes these scripts from `package.json`:
-
-- `dev` — next dev
-- `build` — next build
-- `start` — next start
-- `lint` — eslint (run `npm run lint` to see lint issues)
-
-## Adding / using shadcn-style components
-
-This repo already organizes UI primitives under `src/components/ui` following a shadcn-style approach (component-first primitives like `button.tsx`, `card.tsx`, `sheet.tsx`). If you want to adopt the official `shadcn/ui` setup, follow the upstream docs to install and configure it, or use the existing primitives as a pattern.
-
-Suggested steps to add the shadcn toolchain (optional):
-
-1. Install the `shadcn/ui` package or use their scaffolding tool per their docs.
-2. Generate components into `src/components/ui`.
-3. Wire theme / tailwind tokens as needed.
-
-## Notes on Redux setup
-
-- Store configuration lives in `src/redux/store.ts`.
-- A `Provider` wrapper exists at `src/redux/Provider.tsx` — use the wrapper in `_app` or root layout to provide the store.
-- `redux-persist` is installed to keep state across sessions; verify storage config for SSR correctness.
-
-## Development tips
-
-- If you get hydration warnings, ensure that persisted state is rehydrated client-side only (guard server vs client usage).
-- Use the `src/components/ui/*` primitives to keep the UI consistent.
-- Add tests around reducers and selectors for early feedback.
-
-## Quality gates (recommended checks)
-
-- Build: run `npm run build` locally to ensure production builds. (Not run here.)
-- Lint/Typecheck: run your linter and TypeScript check via your editor or `npm run lint` plus `tsc --noEmit`.
-- Tests: no tests included by default — consider adding a small Jest/Testing Library setup.
-
-## Try it — quick commands
-
-```powershell
-# clone the repo (change the URL if you forked or renamed the repository)
-git clone https://github.com/rakib-utsho/NextJs_REDUX_boilerplate.git
-cd NextJs_REDUX_boilerplate
-
-# install dependencies
-npm install
-
-# run dev server
-npm run dev
-```
-
-Open <http://localhost:3000> (or the port set in `NEXT_PUBLIC_PORT`) in your browser.
-
-## Contributing and next steps
-
-- Add more feature slices under `src/redux/features/` as your app grows.
-- Expand `src/components/ui` with shared primitives and document usage.
-- Add CI (GitHub Actions) to run lint/build on PRs.
+- The project currently focuses on frontend implementation and UI behavior.
+- Redux structure is included for scalability even where state usage is minimal.
+- Sections are easy to reorder or extend through `src/components/home/Home.tsx`.
 
 ## Author
 
-Md. Rakibul Islam — Junior Frontend Developer
+Md. Rakibul Islam
 
 ## License
 
-This project is open-source and released under the MIT License. See the `LICENSE` file for the full text.
-
----
+MIT — see `LICENSE` for details.
