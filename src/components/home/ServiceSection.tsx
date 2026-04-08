@@ -55,7 +55,7 @@ interface ServiceCardProps {
 
 function ServiceCard({ title, description, image }: ServiceCardProps) {
   return (
-    <Card className="h-full rounded-[10px] border border-[#f4c6d1] bg-[#f6f6f6] px-5 py-6 text-start shadow-none md:px-6 md:py-7 hover:bg-white hover:border-white">
+    <Card className="h-full rounded-[10px] border border-[#f4c6d1] bg-[#f6f6f6] px-5 py-6 text-start shadow-none md:px-6 md:py-7 hover:bg-white hover:shadow-lg hover:border-white">
       <Image
         src={image}
         alt={title}
@@ -93,7 +93,7 @@ function ServiceSection() {
         commodo consequat.{" "}
       </p>
 
-      <div className="mx-auto mt-10 grid w-full container grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 xl:grid-cols-3">
+      <div className="mx-auto mt-10 grid w-full max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 xl:grid-cols-3">
         {services.map((service) => (
           <ServiceCard
             key={service.title}

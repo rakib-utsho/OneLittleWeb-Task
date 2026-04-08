@@ -36,7 +36,7 @@ export const Footer = () => {
     <footer className="w-full bg-[#FFFFFF] border border-t-[#D6D6D6]">
       {/* Main Div */}
       {/* Logo and description */}
-      <div className="mx-auto w-full container flex flex-col items-start justify-between gap-10 py-16 px-6 sm:flex-row">
+      <div className="mx-auto w-full max-w-7xl flex flex-col items-start justify-between gap-10 py-16 px-6 sm:flex-row">
         <div className="">
           <Link href="/" className="text-lg font-bold">
             <Image

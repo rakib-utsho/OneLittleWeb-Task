@@ -4,7 +4,7 @@ const steps = [
   {
     id: "01",
     title: "Add requirements & sign up today",
-    icon: "/images/img1.png",
+    icon: "/images/img3.png",
   },
   {
     id: "02",
@@ -14,7 +14,7 @@ const steps = [
   {
     id: "03",
     title: "Meet your STR Assistant next week",
-    icon: "/images/img3.png",
+    icon: "/images/img1.png",
   },
 ];
 
@@ -33,13 +33,13 @@ function GetStartedSection() {
           aliquip ex ea commodo consequat.
         </p>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-5">
+        <div className="mt-12 grid grid-cols-1 gap-25 md:grid-cols-3 md:gap-20">
           {steps.map((step) => {
             const Icon = step.icon;
 
             return (
               <article key={step.id} className="relative">
-                <span className="absolute -left-3 -top-3 z-10 flex h-12 w-12 items-center justify-center rounded-full border-4 border-[#ED3C6A] bg-[#f6f6f6] text-2xl font-medium leading-none text-[#171717] p-4">
+                <span className="absolute -left-3 -top-3 z-10 flex h-15 w-15 items-center justify-center rounded-full border-4 border-[#ED3C6A] bg-[#f6f6f6] text-2xl font-medium leading-none text-[#171717] p-4">
                   {step.id}
                 </span>
 

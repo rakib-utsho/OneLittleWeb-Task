@@ -26,7 +26,7 @@ export const Navbar = () => {
     //main header
     <header className="sticky top-0 z-50 w-full mx-auto border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       {/*container for navbar content */}
-      <div className="w-full container mx-auto flex items-center justify-between p-4">
+      <div className="w-full max-w-7xl mx-auto flex items-center justify-between p-4">
         {/*logo section*/}
         <Link href="/" className="text-2xl font-bold">
           <Image src={"/images/logo.png"} alt="Logo" width={120} height={60} />
