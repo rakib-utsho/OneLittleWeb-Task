@@ -1,4 +1,5 @@
 import CTCSection from "./CTCSection";
+import FAQSection from "./FAQSection";
 import GetStartedSection from "./GetStartedSection";
 import HeroSection from "./HeroSection";
 import PriceSection from "./PriceSection";
@@ -18,6 +19,7 @@ function Home() {
       <GetStartedSection />
       <CTCSection />
       <TestimonialSection />
+      <FAQSection />
     </>
   );
 }
